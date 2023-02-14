@@ -1,4 +1,10 @@
+<div align ="center">
+<img alt="Developer Pic"
+        src="https://github.com/Subham-Maity/GalaxyGossip/blob/main/asset_extra_codexam/GalaxyGossip.jpg?raw=true" width="450"/>
+</div>
+
 # GalaxyGossip: A Social Media Platform for Space Enthusiasts 🚀🪐
+
 
 GalaxyGossip is a *cutting-edge social media platform* designed specifically for individuals passionate about exploring the universe. Built with advanced **artificial intelligence (AI) technology**, GalaxyGossip provides a platform for knowledge-sharing, collaboration, and community-building.
 
