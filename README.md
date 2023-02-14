@@ -1,6 +1,6 @@
 <div align ="center">
 <img alt="Developer Pic"
-        src="https://github.com/Subham-Maity/GalaxyGossip/blob/main/asset_extra_codexam/GalaxyGossip2.jpg?raw=true" width="450"/>
+        src="https://github.com/Subham-Maity/GalaxyGossip/blob/main/asset_extra_codexam/GalaxyGossip2.jpg?raw=true"/>
 </div>
 
 # GalaxyGossip: A Social Media Platform for Space Enthusiasts 🚀🪐
