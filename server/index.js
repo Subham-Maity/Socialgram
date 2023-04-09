@@ -23,7 +23,7 @@ import { users, posts } from "./data/index.js";
 // Getting the current filename of the  current module file using fileURLToPath function
 const __filename = fileURLToPath(import.meta.url);
 
-// Getting the current directory name of the current module file using path.dirname function
+// Getting the current directory  name of the current module file using path.dirname function
 const __dirname = path.dirname(__filename);
 
 // Loading environment variables from .env file into process.env
