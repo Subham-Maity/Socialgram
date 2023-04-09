@@ -20,7 +20,7 @@ import { users, posts } from "./data/index.js";
 
 /* CONFIGURATIONS */
 
-// Getting the current filename of the current module file using fileURLToPath function
+// Getting the current filename of the  current module file using fileURLToPath function
 const __filename = fileURLToPath(import.meta.url);
 
 // Getting the current directory name of the current module file using path.dirname function
