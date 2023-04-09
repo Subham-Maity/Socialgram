@@ -19,10 +19,19 @@ import Post from "./models/Post.js";
 import { users, posts } from "./data/index.js";
 
 /* CONFIGURATIONS */
+
+// Getting the current filename of the current module file using fileURLToPath function
 const __filename = fileURLToPath(import.meta.url);
+
+// Getting the current directory name of the current module file using path.dirname function
 const __dirname = path.dirname(__filename);
+
+// Loading environment variables from .env file into process.env
 dotenv.config();
+
 const app = express();
+
+//It converts the incoming data from JSON format into a JS object and makes it available to our program
 app.use(express.json());
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
@@ -30,7 +39,7 @@ app.use(morgan("common"));
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
-app.use("/assets", express.static(path.join(__dirname, "public/assets")));
+app.use("/assets", express.static(path.join(__dirname, "public/assets"))); //Future Plan Cloud Storage s3
 
 /* FILE STORAGE */
 const storage = multer.diskStorage({
@@ -42,7 +51,6 @@ const storage = multer.diskStorage({
   },
 });
 const upload = multer({ storage });
-
 
 /* ROUTES WITH FILES */
 app.post("/auth/register", upload.single("picture"), register);
