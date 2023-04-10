@@ -20,10 +20,10 @@ import { users, posts } from "./data/index.js";
 
 /* CONFIGURATIONS */
 
-// Getting the current filename of the  current module file using fileURLToPath function
+// Getting the current filename of the current module file using fileURLToPath function
 const __filename = fileURLToPath(import.meta.url);
 
-// Getting the current directory  name of the current module file using path.dirname function
+// Getting the current directory name of the current module file using path.dirname function
 const __dirname = path.dirname(__filename);
 
 // Loading environment variables from .env file into process.env
@@ -33,6 +33,8 @@ const app = express();
 
 //It converts the incoming data from JSON format into a JS object and makes it available to our program
 app.use(express.json());
+
+// Setting various HTTP headers to help secure your Express app against common web vulnerabilities like XSS and clickjacking attacks
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("common"));
@@ -46,14 +48,18 @@ const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "public/assets");
   },
+
   filename: function (req, file, cb) {
     cb(null, file.originalname);
   },
 });
+
 const upload = multer({ storage });
 
 /* ROUTES WITH FILES */
+
 app.post("/auth/register", upload.single("picture"), register);
+
 app.post("/posts", verifyToken, upload.single("picture"), createPost);
 
 /* ROUTES */
