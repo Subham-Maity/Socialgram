@@ -11,7 +11,6 @@ Developed MERN Stack social media app. Secured and maintained sign-up/in users' 
 
 ![image](https://github.com/lisa1501/Socialgram_mern_app/blob/main/images/signUp:signIn.png)
 ![image](https://github.com/lisa1501/Socialgram_mern_app/blob/main/images/homepage.png)
-![image](https://github.com/lisa1501/Socialgram_mern_app/blob/main/images/comment.png)
 ![image](https://github.com/lisa1501/Socialgram_mern_app/blob/main/images/profilepage.png)
 
 
